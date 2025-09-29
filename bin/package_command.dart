@@ -444,8 +444,12 @@ class PackageCommand extends Command {
       stdout.writeln("Error: $e");
     } finally {
       if (tempDir != null && await tempDir.exists()) {
-        stdout.writeln("Deleting temp directory");
-        await tempDir.delete(recursive: true);
+        try {
+          stdout.writeln("Deleting temp directory");
+          await tempDir.delete(recursive: true);
+        } catch (e) {
+          stdout.writeln("Warning: Could not delete temp directory: $e");
+        }
       }
       if (pyodidePyPiServer != null) {
         stdout.writeln("Shutting down Pyodide PyPI server");
