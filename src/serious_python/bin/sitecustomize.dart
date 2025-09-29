@@ -11,6 +11,14 @@ import platform
 import sysconfig
 import sys
 
+# Fix UTF-8 encoding issues
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+except AttributeError:
+    # For older Python versions
+    pass
+
 if custom_system:
     platform.system = lambda: custom_system
 
