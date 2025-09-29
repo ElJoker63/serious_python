@@ -1,0 +1,7 @@
+numpy
+#lru-dict
+#pyjnius
+#flet-libsodium
+# pysodium
+# numpy
+# Pyrebase4
