@@ -33,15 +33,15 @@ dependencies:
   flutter:
     sdk: flutter
   serious_python_platform_interface:
-    path: ../serious_python_platform_interface
+    path: src/serious_python_platform_interface
   serious_python_android:
-    path: ../serious_python_android
+    path: src/serious_python_android
   serious_python_darwin:
-    path: ../serious_python_darwin
+    path: src/serious_python_darwin
   serious_python_windows:
-    path: ../serious_python_windows
+    path: src/serious_python_windows
   serious_python_linux:
-    path: ../serious_python_linux
+    path: src/serious_python_linux
 
   path_provider: ^2.1.3
   archive: ^3.6.1
